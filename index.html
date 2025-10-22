@@ -61,6 +61,11 @@
         </section>
 
 
+        <section id="rw" class="row justify-content-center bg-primary">
+            <h1 class="text-capitalize fw-bold fs-2 text-center py-3">meet the doctors of great sloan memorial</h1>
+        </section>
+
+
 
     </main>
 
@@ -69,7 +74,66 @@
 
     <script>
 
+        let persons = [
+            {
+                name: "YousefMohamed",
+                id: 1,
+                postion: "Manager",
+                image: "images/yuy (1).jpeg"
+            },
+            {
+                name: "Ahmed Mohamed",
+                id: 3,
+                postion: "Manager",
+                image: "images/yuy (1).jpeg"
+            },
+            {
+                name: "Abdo Mohamed",
+                id: 4,
+                postion: "Manager",
+                image: "images/yuy (1).jpeg"
 
+            },
+            {
+                name: "Seif Mohamed",
+                id: 2,
+                postion: "Manager",
+                image: "images/yuy (1).jpeg"
+
+            },
+            {
+                name: "Abdo Mohamed",
+                id: 4,
+                postion: "Manager",
+                image: "images/yuy (1).jpeg"
+
+            }, {
+                name: "Samir Mohamed",
+                id: 4,
+                postion: "Manager",
+                image: "images/yuy (1).jpeg"
+
+            },
+            {
+                name: "amr Mohamed",
+                id: 4,
+                postion: "Manager",
+                image: "images/yuy (1).jpeg"
+
+            }
+
+        ];
+        for (let i = 0; i < persons.length; i++) {
+            document.getElementById("rw").innerHTML += `<div class="col-3 p-2 pb-3  m-4 text-center border border-3 border-black bg-white ">
+                <h1 class="fw-bold fs-2">${persons[i].name}</h1>
+                <img src="${persons[i].image}" class="w-50 h-50">
+                <hr>
+                <h1 class="fw-bold fs-2">${persons[i].id}</h1>
+                    <br>
+                <button class="fs-2 bg-black text-white">Show info</button>
+                </div>
+            `
+        }
     </script>
 </body>
 
