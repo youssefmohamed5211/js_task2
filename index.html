@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="">
     <main>
         <header class="justify-content-between head row">
             <div class="col-lg-4 justify-content-xl-start col-md-12 text-md-center justify-content-lg-center">
@@ -23,6 +23,7 @@
                     <li class="px-2 mx-1 fs-4 fw-semibold text-white">Our Legacy</li>
                     <li class="px-2 mx-1 fs-4 fw-semibold text-white">The doctors</li>
                 </ul>
+
             </div>
             <div class="col-lg-3">
                 <h1 class="fw-bold logo text-white text-capitalize text-md-center  text-sm-center">GREY'S <span
@@ -34,8 +35,9 @@
                     <li class="px-2 mx-3 fs-4 fw-semibold text-white">fandom</li>
                     <li class="px-2 mx-3 fs-4 fw-semibold text-white">specialities</li>
                     <li class="px-2 mx-3 fs-4 fw-semibold text-white">contact us</li>
-                </ul>
+                    <button class="h-25 mt-2 " id="darkmode">dark</button>
 
+                </ul>
             </div>
         </header>
         <section class="bg">
@@ -44,8 +46,8 @@
             <br>
             <br>
             <div class=" align-items-center mt-5 ms-lg-5 ms-md-0">
-                <h1 class="fw-bold logo text-white  fa-underline mt-5 bodysent  "><u> GREY'S </u><span
-                        class="text-white"><sub> ANATOMY</sub></span></h1>
+                <h1 class="fw-bold logo   fa-underline mt-5 bodysent  "><u> GREY'S </u><span class="logo"><sub>
+                            ANATOMY</sub></span></h1>
                 <br>
                 <p class="text-capitalize text-white w-50 fw-bold">hello to our center we glad that you joined our team
                     we will
@@ -61,9 +63,10 @@
         </section>
 
 
-        <section id="rw" class="row justify-content-center bg-primary">
-            <h1 class="text-capitalize fw-bold fs-2 text-center py-3">meet the doctors of great sloan memorial</h1>
+        <section id="rw" class="row justify-content-center cardss ">
+            <h1 class="text-capitalize fw-bold fs-2 text-center py-3 ">meet the doctors of great sloan memorial</h1>
         </section>
+
 
 
 
@@ -124,16 +127,33 @@
 
         ];
         for (let i = 0; i < persons.length; i++) {
-            document.getElementById("rw").innerHTML += `<div class="col-3 p-2 pb-3  m-4 text-center border border-3 border-black bg-white ">
+            document.getElementById("rw").innerHTML += `<div class= "  col-3 p-2 pb-md-3  m-4 text-center border border-3 pb-sm-5 border-black  square ">
                 <h1 class="fw-bold fs-2">${persons[i].name}</h1>
                 <img src="${persons[i].image}" class="w-50 h-50">
                 <hr>
                 <h1 class="fw-bold fs-2">${persons[i].id}</h1>
                     <br>
-                <button class="fs-2 bg-black text-white">Show info</button>
+                <button class="fs-2 bg-black text-white pt-0 mb-sm-5">Show info</button>
                 </div>
             `
         }
+        let darkmood = 0;
+        let dark = document.getElementById("darkmode");
+        dark.addEventListener("click", () => {
+            document.body.classList.toggle("darkmode");
+            if (darkmood == 0) {
+                dark.innerHTML = "white";
+                dark.style.backgroundColor = "black";
+                dark.style.color = "white";
+                darkmood = 1;
+            } else {
+                dark.innerHTML = "black";
+                dark.style.backgroundColor = "white";
+                dark.style.color = "black";
+                darkmood = 0;
+            }
+
+        })
     </script>
 </body>
 

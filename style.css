@@ -10,6 +10,9 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+
+
+
 .head {
     background-image: linear-gradient(rgb(89, 89, 230), rgb(2, 2, 44));
 }
@@ -22,6 +25,7 @@ ul li {
     font-family: "Rubik Bubbles", system-ui;
     font-weight: 400;
     font-style: normal;
+    color: var(--maintextcolor);
 }
 
 .bg {
@@ -40,4 +44,28 @@ ul li {
 
 .btnhover:hover {
     background-color: greenyellow !important;
+}
+
+
+:root {
+    --mainbgcolor: red;
+    --maincardbgcolor: blue;
+    --mainbgtext: blue;
+    --maintextcolor: rgb(192, 192, 49);
+}
+
+.darkmode {
+    --mainbgcolor: grey;
+    --maincardbgcolor: black;
+    --mainbgcards: black;
+    --maintextcolor: whitesmoke;
+}
+
+.cardss {
+    background-color: var(--mainbgcolor);
+    color: var(--maintextcolor);
+}
+
+.square {
+    background-color: var(--maincardbgcolor);
 }
